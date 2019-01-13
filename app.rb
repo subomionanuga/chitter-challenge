@@ -5,4 +5,8 @@ require './config/chitter_mapper'
 
 class Chitter < Sinatra::Base
 
+  get '/' do
+    erb(:index)
+  end
+
 end
