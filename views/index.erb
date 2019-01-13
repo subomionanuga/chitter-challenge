@@ -12,6 +12,6 @@
   </form>
 <h2>Recent Peeps</h2>
 <% @peeps.reverse.each do |peep| %>
-<%= peep.message%>
+<%= peep.message%> - posted:<%= peep.created%>
 <br>
 <%end%>
