@@ -72,7 +72,10 @@ For coverage and to check code quality
 * rubocop
 Use `bundle install` to install the added gems to your repo
 
-
+Setup
+-----
+Create your databases on your local machine. PostgreSQL will need to be installed on your machine.
+* Using `createdb` add two databases, one for your test and another for your development environments.
 
 
 This week you integrated a database into Bookmark Manager using the `PG` gem and `SQL` queries. You can continue to use this approach when building Chitter Challenge.
