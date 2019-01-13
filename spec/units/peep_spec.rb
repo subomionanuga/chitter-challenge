@@ -11,7 +11,7 @@ describe Peep do
     end
 
     it "has a timestamp assocaited with the peep" do
-      expect(peep.created).to eq Time.now
+      expect(peep.created_at).to eq Time.now.strftime("%d-%m-%Y %H:%M:%S")
     end
   end
 end
