@@ -1,18 +1,14 @@
 Chitter Challenge
 =================
 
-* Challenge time: rest of the day and weekend, until Monday 9am
-* Feel free to use Google, your notes, books, etc. but work on your own
-* If you refer to the solution of another coach or student, please put a link to that in your README
-* If you have a partial solution, **still check in a partial solution**
-* You must submit a pull request to this repo with your code by 9am Monday morning
-
 Challenge:
 -------
 
-As usual please start by forking this repo.
+This repo was forked from https://github.com/makersacademy/chitter-challenge
 
-We are going to write a small Twitter clone that will allow the users to post messages to a public stream.
+The aim of the challenge is to create mall Twitter clone that will allow the users to post messages to a public stream.
+
+This challenge should help to reinforce what we have learned in week 5 in relation to building web apps using web apps.
 
 Features:
 -------
@@ -53,8 +49,31 @@ So that I can stay constantly tapped in to the shouty box of Chitter
 I want to receive an email if I am tagged in a Peep
 ```
 
-Technical Approach:
+Notes on functionality:
+------
+
+* You don't have to be logged in to see the peeps.
+* Makers sign up to chitter with their email, password, name and a username (e.g. samm@makersacademy.com, password123, Sam Morgan, sjmog).
+* The username and email are unique.
+* Peeps (posts to chitter) have the name of the maker and their user handle.
+* Your README should indicate the technologies used, and give instructions on how to install and run the tests.
+
+Installation:
 -----
+Use `bundle init` to create a gemfile and `bundle add` to add the following gems to the gemfile
+* rspec
+* capybara
+* sinatra
+* rake
+* data_mapper
+* dm-postgres-adapter
+For coverage and to check code quality
+* simplecov
+* rubocop
+Use `bundle install` to install the added gems to your repo
+
+
+
 
 This week you integrated a database into Bookmark Manager using the `PG` gem and `SQL` queries. You can continue to use this approach when building Chitter Challenge.
 
@@ -70,14 +89,6 @@ Some useful resources:
 - [Sinatra, PostgreSQL & ActiveRecord recipe](http://recipes.sinatrarb.com/p/databases/postgresql-activerecord?#article)
 
 
-Notes on functionality:
-------
-
-* You don't have to be logged in to see the peeps.
-* Makers sign up to chitter with their email, password, name and a username (e.g. samm@makersacademy.com, password123, Sam Morgan, sjmog).
-* The username and email are unique.
-* Peeps (posts to chitter) have the name of the maker and their user handle.
-* Your README should indicate the technologies used, and give instructions on how to install and run the tests.
 
 Bonus:
 -----
