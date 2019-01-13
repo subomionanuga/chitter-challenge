@@ -2,4 +2,16 @@
   <h1>Welcome to Chitter</h1>
 </center>
 
-<%= @peeps %>
+<h2>Post a peep</h2>
+
+  <form action='/peep' method='post'>
+    <label for='message'>What's on your mind?</label>
+    <br>
+    <input type='text' name='message'>
+    <input type='submit' value='post peep'>
+  </form>
+<h2>Recent Peeps</h2>
+<% @peeps.each do |peep| %>
+<%= peep.message%>
+<br>
+<%end%>

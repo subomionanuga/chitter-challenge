@@ -10,4 +10,8 @@ class Chitter < Sinatra::Base
     erb(:index)
   end
 
+  post '/peep' do
+    @peep = Peep.create(message: params[:message])
+    redirect '/'
+  end
 end
