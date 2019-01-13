@@ -15,3 +15,8 @@
 <%= peep.message%> - posted:<%= peep.created_at.strftime("%d-%m-%Y %H:%M:%S")%>
 <br>
 <%end%>
+
+<h3>Create your account below</h3>
+  <form action='/signup' method='get'>
+    <input type='submit' value='Sign up'>
+  </form>
