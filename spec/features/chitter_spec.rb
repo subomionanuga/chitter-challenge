@@ -21,4 +21,14 @@ feature 'Homepage' do
     click_button 'Create Account'
     expect(page).to have_current_path '/'
   end
+
+  scenario 'Able to signin' do
+    visit '/'
+    click_button 'Sign In'
+    fill_in 'email', with: 'peep@peep.com'
+    fill_in 'username', with: 'sonanuga'
+    fill_in 'password', with: 'password123'
+    click_button 'Sign In'
+    expect(page).to have_curent_path '/'
+  end
 end
