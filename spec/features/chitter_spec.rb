@@ -11,7 +11,7 @@ feature 'Homepage' do
     expect(page).to have_content 'This is my first peep'
   end
 
-  scenario 'Able to login' do
+  scenario 'Able to signup' do
     visit '/'
     click_button 'Sign up'
     fill_in 'email', with: 'peep@peep.com'
@@ -19,6 +19,6 @@ feature 'Homepage' do
     fill_in 'name', with: 'Subomi Onanuga'
     fill_in 'username', with: 'sonanuga'
     click_button 'Create Account'
-    expect(page).to have_content "Your Chitter Feed"
+    expect(page).to have_current_path '/'
   end
 end
