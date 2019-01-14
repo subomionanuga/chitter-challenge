@@ -1,0 +1,17 @@
+<center>
+  <h1>Your Chitter Feed</h1>
+</center>
+
+<form action='/peep' method='post'>
+  <label for='message'>What's on your mind?</label>
+  <br>
+  <input type='text' name='message'>
+  <input type='submit' value='Post peep'>
+</form>
+<h2>Recent Peeps</h2>
+<% @peeps.reverse.each do |peep| %>
+<%= peep.message%> - posted:<%= peep.created_at.strftime("%d-%m-%Y %H:%M:%S")%>
+<br>
+<%end%>
+
+<h2>Your Peeps</h2>
