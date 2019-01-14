@@ -28,6 +28,18 @@ class Chitter < Sinatra::Base
     # redirect "/profile/#{session[:id]}"
   end
 
+  get '/signin' do
+    erb(:signin)
+  end
+
+  post '/signin' do
+    user = User.authenticate(email: params[:email], username: params[:username], password: params[:password])
+    if user
+      session[:id] = user.id
+      redirect "/profile/#{session[:id]}"
+    end
+  end
+
   get '/profile/:id' do
     @user = User.get(params[:id])
     # @peeps = Peep.all(:conditions => { :user_id => params[:id] })

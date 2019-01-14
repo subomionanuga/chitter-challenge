@@ -29,6 +29,6 @@ feature 'Homepage' do
     fill_in 'username', with: 'sonanuga'
     fill_in 'password', with: 'password123'
     click_button 'Sign In'
-    expect(page).to have_curent_path '/'
+    expect(page).to have_curent_path '/profile/:id'
   end
 end

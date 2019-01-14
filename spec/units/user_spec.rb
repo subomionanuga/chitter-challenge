@@ -22,4 +22,13 @@ describe User do
       expect(user.username).to eq 'sonanuga'
     end
   end
+
+  context 'Sign in' do
+
+    let(:user) { User.create(email: 'peep@peep.com', password: 'password123', name: 'Subomi Onanuga', username: 'sonanuga') }
+
+    it "checks for an exisiting user" do
+    expect(User.authenticate(user.email, user.username, 'password123')).to eq user
+    end
+  end
 end
